@@ -1,11 +1,12 @@
 import checkResult from './battlefunctions.js';
-let userAttack = 'PAPER';
-//document.querySelector('input[name="attackbutton"]:checked').value;
+let userAttack = document.getElementById('attackbutton').value;
 const randomGodzillaattack = Math.random();
 let godzillaAttack = 'ROCK';
 // initialize/fetch DOM elements
 let winner = 0;
 const attackButton = document.getElementById('attackbutton');
+let userScore = 0;
+let godzillaScore = 0;
 evaluateGodzillaStatusAndPlanAttack();
 
 
@@ -16,7 +17,7 @@ evaluateGodzillaStatusAndPlanAttack();
 // define DOM utility function
 
 
-console.log(userAttack);
+
 
 //Godzilla attack block
 function evaluateGodzillaStatusAndPlanAttack(){
@@ -72,11 +73,19 @@ function godzillaLosesWithScissors(){
 
 // add event listeners
 attackButton.addEventListener('click', () => {
-    userAttack = document.querySelector('input:checked').value;
+    //const userAttack = document.querySelector('input:checked').value;
+    userAttack = attackButton.querySelector('input[name="attackbutton"]:checked').value;
     evaluateGodzillaStatusAndPlanAttack();
     checkResult (userAttack, godzillaAttack);
     console.log('button clicked');
     console.log('user attack ' + userAttack);
     winner = checkResult(userAttack, godzillaAttack);
+    if (winner = 1){
+        userScore + 10;
+    }
+    if (winner = -1){
+        godzillaScore + 10;
+    }
+    
     
 });
