@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import checkResult from '../battleresult.js';  
+import checkResult from '../battlefunctions.js/index.js';  
 
 const test = QUnit.test;
 

@@ -1,5 +1,8 @@
 export default function checkResult(userAttack, godzillaAttack){
+    let winner = 0;
+    console.log('winner = ' + winner);
     if (userAttack === 'rock' && godzillaAttack === 'scissors'){
-        return 1;
+        winner = 1;
     }
+    console.log('we are in the checkResult');
 }

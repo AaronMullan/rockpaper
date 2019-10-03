@@ -1,9 +1,11 @@
 body {
     font-family: 'IBM Plex Mono', monospace;
-    color: white;
-    background-color: black
+    color: #b9b9b9;
+    background-color: rgb(56, 56, 56)
 }
-
+.green{
+    color: rgb(9, 245, 9)
+}
 .red{
     color: red
 }

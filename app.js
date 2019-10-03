@@ -1,37 +1,67 @@
+import checkResult from './battlefunctions.js';
+
 // initialize/fetch DOM elements
-const attackButton = document.getElementById('attack');
+winner = checkResult(userAttack,godzillaAttack)
+const attackButton = document.getElementById('attackbutton');
 let randomGodzillaattack;
-let godzillaLosesWithRock;
-let gozillaLosesWithPaper;
-let godzillaLosesWithScissors;
 
 
 // set some initial state
-let userAttack = 'rock';
-let godzillaAttack = 'rock';
+let userAttack = 'ROCK';
+let godzillaAttack = 'ROCK';
 
 // define DOM utility function
-//Godzilla attacks: 0-.33=rock .34-.67=paper .68-.99=scissors
-//If game is tied, Godzilla attack random 
-//If godzilla lost, select among other attacks
-//if godzilla won, no change in godzilla attack
+const selectedRadioButton = document.querySelector('input:checked');
+userAttack = selectedRadioButton.value;
+console.log(userAttack);
+
+//Godzilla attack block
+function evaluateGodzillaStatusAndPlanAttack (){
+    if (winner === 0){
+        godzillaAttack = godzillaTies;
+    }
+    if (winner === 1)
 
 
 randomGodzillaattack = Math.random();
 console.log(randomGodzillaattack);
 
-godzillaLosesWithRock = Math.random();
+function godzillaTies(){
+    if (randomGodzillaattack < .33){
+        godzillaAttack = 'ROCK';
+    }
+    if (randomGodzillaattack > .33 && randomGodzillaattack < .67){
+        godzillaAttack = 'PAPER';
+    }
+    if (randomGodzillaattack >= .67){
+        godzillaAttack = 'SCISSORS';
+    }
+}
 
-gozillaLosesWithPaper = Math.random();
+function godzillaLosesWithRock(){
+    if (randomGodzillaattack < .5){
+        godzillaAttack = 'PAPER';
+    }
+    else godzillaAttack = 'SCISSORS';
+}
 
-gozillaLosesWithScissors = Math.random();
+function gozillaLosesWithPaper(){
+    if (randomGodzillaattack < .5){
+        godzillaAttack = 'ROCK';
+    }
+    else godzillaAttack = 'SCISSORS';
+}
 
-
-
-const selectedRadioButton = document.querySelector('input:checked');
-userAttack = selectedRadioButton.value;
-console.log(userAttack);
+function godzillaLosesWithScissors(){
+    if (randomGodzillaattack < .5){
+        godzillaAttack = 'ROCK';
+    }
+    else godzillaAttack = 'PAPER';
+}
 
 
 // add event listeners
-
+attackButton.addEventListener('click', () => {
+    checkResult (userAttack, godzillaAttack);
+    console.log('button clicked');
+});
