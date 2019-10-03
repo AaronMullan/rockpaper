@@ -1,39 +1,49 @@
 import checkResult from './battlefunctions.js';
-
+let userAttack = 'PAPER';
+//document.querySelector('input[name="attackbutton"]:checked').value;
+const randomGodzillaattack = Math.random();
+let godzillaAttack = 'ROCK';
 // initialize/fetch DOM elements
-winner = checkResult(userAttack,godzillaAttack)
+let winner = 0;
 const attackButton = document.getElementById('attackbutton');
-let randomGodzillaattack;
+evaluateGodzillaStatusAndPlanAttack();
 
 
 // set some initial state
-let userAttack = 'ROCK';
-let godzillaAttack = 'ROCK';
+
+
 
 // define DOM utility function
-const selectedRadioButton = document.querySelector('input:checked');
-userAttack = selectedRadioButton.value;
+
+
 console.log(userAttack);
 
 //Godzilla attack block
-function evaluateGodzillaStatusAndPlanAttack (){
+function evaluateGodzillaStatusAndPlanAttack(){
     if (winner === 0){
-        godzillaAttack = godzillaTies;
+        godzillaTies();
     }
-    if (winner === 1)
+    else if (winner === 1 && godzillaAttack === 'ROCK'){
+        godzillaLosesWithRock();
+    }
+    else if (winner === 1 && godzillaAttack === 'PAPER'){
+        godzillaLosesWithPaper();
+    }
+    else if (winner === 1 && godzillaAttack === 'SCISSORS'){
+        godzillaLosesWithScissors();
+    }
+}
 
-
-randomGodzillaattack = Math.random();
-console.log(randomGodzillaattack);
+console.log('Godzilla attack value ' + randomGodzillaattack + godzillaAttack);
 
 function godzillaTies(){
     if (randomGodzillaattack < .33){
         godzillaAttack = 'ROCK';
     }
-    if (randomGodzillaattack > .33 && randomGodzillaattack < .67){
+    else if (randomGodzillaattack > .33 && randomGodzillaattack < .67){
         godzillaAttack = 'PAPER';
     }
-    if (randomGodzillaattack >= .67){
+    else if (randomGodzillaattack >= .67){
         godzillaAttack = 'SCISSORS';
     }
 }
@@ -45,7 +55,7 @@ function godzillaLosesWithRock(){
     else godzillaAttack = 'SCISSORS';
 }
 
-function gozillaLosesWithPaper(){
+function godzillaLosesWithPaper(){
     if (randomGodzillaattack < .5){
         godzillaAttack = 'ROCK';
     }
@@ -62,6 +72,11 @@ function godzillaLosesWithScissors(){
 
 // add event listeners
 attackButton.addEventListener('click', () => {
+    userAttack = document.querySelector('input:checked').value;
+    evaluateGodzillaStatusAndPlanAttack();
     checkResult (userAttack, godzillaAttack);
     console.log('button clicked');
+    console.log('user attack ' + userAttack);
+    winner = checkResult(userAttack, godzillaAttack);
+    
 });
