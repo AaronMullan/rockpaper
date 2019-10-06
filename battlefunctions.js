@@ -1,33 +1,31 @@
-let winner = 0;
-
-export default function checkResult(userAttack, godzillaAttack){
+const checkResult = (userAttack, godzillaAttack) => {
     
-    if (userAttack === 'ROCK' && godzillaAttack === 'ROCK'){
-        winner = 0;
+    if (userAttack === 'rock' && godzillaAttack === 'rock'){
+        return 0;
     }
-    else if (userAttack === 'ROCK' && godzillaAttack === 'PAPER'){
-        winner = -1;
+    else if (userAttack === 'rock' && godzillaAttack === 'paper'){
+        return -1;
     }
-    else if (userAttack === 'ROCK' && godzillaAttack === 'SCISSORS'){
-        winner = 1;
+    else if (userAttack === 'rock' && godzillaAttack === 'scissors'){
+        return 1;
     }
-    else if (userAttack === 'PAPER' && godzillaAttack === 'ROCK'){
-        winner = 1;
+    else if (userAttack === 'paper' && godzillaAttack === 'rock'){
+        return 1;
     }
-    else if (userAttack === 'PAPER' && godzillaAttack === 'PAPER'){
-        winner = 0;
+    else if (userAttack === 'paper' && godzillaAttack === 'paper'){
+        return 0;
     }
-    else if (userAttack === 'PAPER' && godzillaAttack === 'SCISSORS'){
-        winner = -1;
+    else if (userAttack === 'paper' && godzillaAttack === 'scissors'){
+        return -1;
     }
-    else if (userAttack === 'SCISSORS' && godzillaAttack === 'ROCK'){
-        winner = -1;
+    else if (userAttack === 'scissors' && godzillaAttack === 'rock'){
+        return -1;
     }
-    else if (userAttack === 'SCISSORS' && godzillaAttack === 'PAPER'){
-        winner = 0;
+    else if (userAttack === 'scissors' && godzillaAttack === 'paper'){
+        return 1;
     }
-    else if (userAttack === 'SCISSORS' && godzillaAttack === 'SCISSORS'){
-        winner = 1;
-    }
-    console.log('And the winner is... ' + winner);
-}
+    else if (userAttack === 'scissors' && godzillaAttack === 'scissors'){
+        return 0;
+    }};
+
+export default checkResult;

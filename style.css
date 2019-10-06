@@ -1,7 +1,10 @@
 body {
     font-family: 'IBM Plex Mono', monospace;
     color: #b9b9b9;
-    background-color: rgb(56, 56, 56)
+    background-color: rgb(56, 56, 56);
+    white-space: pre;
+    line-height: .63;
+    
 }
 .green{
     color: rgb(9, 245, 9)

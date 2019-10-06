@@ -1,6 +1,10 @@
 import checkResult from './battlefunctions.js';
 checkResult();
+
+
+
 //const userGuess = document.getElementById('user-input-guess');
+
 
 // initialize/fetch DOM elements
 let randomGodzillaattack = Math.random();
@@ -9,6 +13,31 @@ evaluateGodzillaStatusAndPlanAttack();
 
 let userScore = 0;
 let godzillaScore = 0;
+
+
+// set some initial state
+
+// define DOM utility function
+
+//Godzilla attack block
+function evaluateGodzillaStatusAndPlanAttack(){
+    //randomGodzillaattack = Math.random();
+    
+    if (checkResult === 0){
+        godzillaTies();
+    }
+    else if (checkResult === 1 && godzillaAttack === 'ROCK'){
+        godzillaLosesWithRock();
+    }
+    else if (checkResult === 1 && godzillaAttack === 'PAPER'){
+        godzillaLosesWithPaper();
+    }
+    else if (checkResult === 1 && godzillaAttack === 'SCISSORS'){
+        godzillaLosesWithScissors();
+    }
+}
+
+
 function godzillaTies(){
     if (randomGodzillaattack < .33){
         godzillaAttack = 'ROCK';
@@ -21,12 +50,26 @@ function godzillaTies(){
     }
 }
 
-// set some initial state
-// define DOM utility function
-//Godzilla attack block
+function godzillaLosesWithRock(){
+    if (randomGodzillaattack < .5){
+        godzillaAttack = 'PAPER';
+    }
+    else godzillaAttack = 'SCISSORS';
+}
 
-function evaluateGodzillaStatusAndPlanAttack(){
-    //randomGodzillaattack = Math.random();
+function godzillaLosesWithPaper(){
+    if (randomGodzillaattack < .5){
+        godzillaAttack = 'ROCK';
+    }
+    else godzillaAttack = 'SCISSORS';
+}
+
+function godzillaLosesWithScissors(){
+    if (randomGodzillaattack < .5){
+        godzillaAttack = 'ROCK';
+    }
+    else godzillaAttack = 'PAPER';
+}
 
 
 // add event listeners
@@ -47,5 +90,7 @@ attackButton.addEventListener('click', () => {
     }
     if (checkResult === -1){
         godzillaScore + 10;
-    };
-}
+    }
+    
+    
+});
