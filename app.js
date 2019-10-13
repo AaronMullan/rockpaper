@@ -1,51 +1,31 @@
 import checkResult from './battlefunctions.js';
-checkResult();
-//const userGuess = document.getElementById('user-input-guess');
-
-// initialize/fetch DOM elements
-let randomGodzillaattack = Math.random();
-let godzillaAttack;
-evaluateGodzillaStatusAndPlanAttack();
-
+let result;
+const attackButton = document.getElementById('attackbutton');
+let godzillaAttack = 'rock';
+//let userAttack = 'paper';
 let userScore = 0;
 let godzillaScore = 0;
-function godzillaTies(){
+function displayUserScore () => {
+    document.getElementById('playerscore');
+    playerscore.textContent = userScore;
+    };
+attackButton.addEventListener('click', () => {
+    const userAttack = document.querySelector('input:checked').value;
+    let randomGodzillaattack = Math.random();
     if (randomGodzillaattack < .33){
-        godzillaAttack = 'ROCK';
+        godzillaAttack = 'rock';
     }
     else if (randomGodzillaattack > .33 && randomGodzillaattack < .67){
-        godzillaAttack = 'PAPER';
+        godzillaAttack = 'paper';
     }
     else if (randomGodzillaattack >= .67){
-        godzillaAttack = 'SCISSORS';
+        godzillaAttack = 'scissors';
     }
-}
-
-// set some initial state
-// define DOM utility function
-//Godzilla attack block
-
-function evaluateGodzillaStatusAndPlanAttack(){
-    //randomGodzillaattack = Math.random();
-
-
-// add event listeners
-attackButton.addEventListener('click', () => {
-    //const userAttack = document.querySelector('input:checked').value;
-    //userAttack = attackButton.querySelector('input[name="attackbutton"]:checked').value;
-    const attackButton = document.getElementById('attackbutton');
-    const userAttack = userAttackfromHTML.value;
-    console.log ('userattackfromhtml' + userAttackfromHTML);
-    evaluateGodzillaStatusAndPlanAttack();
-    let winner = checkResult (userAttack, godzillaAttack);
-    console.log('button clicked');
+    result = checkResult(userAttack, godzillaAttack);
+    
     console.log('user attack ' + userAttack);
-    console.log('Godzilla attack value ' + randomGodzillaattack + godzillaAttack);
-    console.log('And the winner is... ' + winner);
-    if (checkResult === 1){
-        userScore + 10;
-    }
-    if (checkResult === -1){
-        godzillaScore + 10;
-    };
-}
+    console.log('godzilla attack ' + godzillaAttack);
+    console.log(result);
+
+
+});

@@ -1,5 +1,4 @@
-const checkResult = (userAttack, godzillaAttack) => {
-    
+function checkResult(userAttack, godzillaAttack){
     if (userAttack === 'rock' && godzillaAttack === 'rock'){
         return 0;
     }
@@ -26,6 +25,6 @@ const checkResult = (userAttack, godzillaAttack) => {
     }
     else if (userAttack === 'scissors' && godzillaAttack === 'scissors'){
         return 0;
-    }};
+    }}
 
 export default checkResult;
