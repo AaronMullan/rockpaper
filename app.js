@@ -39,7 +39,7 @@ const updateSpans = () => {
 };
 
 attackButton.addEventListener('click', () => {
-    if (godzillaScore > 9 || userScore > 9) {window.location.reload()} ;
+    if (godzillaScore > 9 || userScore > 9) {window.location.reload();} 
     const userAttack = document.querySelector('input:checked').value;
     let randomGodzillaattack = Math.random();
     if (randomGodzillaattack < .33){
