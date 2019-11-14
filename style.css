@@ -6,6 +6,13 @@ body {
     line-height: .63;
     
 }
+#container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
 .green{
     color: rgb(9, 245, 9)
 }
