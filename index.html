@@ -6,39 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <!--<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="animate.css">
     <title>Document</title>
 </head>
 
 <body>
-
-    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM <br>
-    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM<br>
-    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM<br>
-    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWMMMWNX0OkxkkOKNMMMMMMMMMMMMMMMMMMMMMM<br>
+    <div id="container" class="animated bounce">  
+        <div id="contained" >
+    MMM <span class="red" id="title">YOU VS. GODZILLA IN AN EPIC BATTLE OF ROCK PAPER SCISSORS</span> WMMMWNX0OkxkkOKNMMMMMMMMMMMMMMMMMMMMMM<br>
     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWMMWMKxxKW0oOWNKOdc;,;;,,,;lkXWMMMMMMMMMMMMMMMMMMM<br>
-    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWW00NWKo;l0Ko:x0xc::;;::;,,,,,cOWMMMMMMMMMMMMMMMMMM<br>
-    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNXdcoOXOkkxo:;::c:::;,::,'';cc;:OWMMMMMMMMMMMMMMMMM<br>
+    MMMMMMMM <span class="red" id="weapon-choice">--CHOOSE YOUR WEAPON--</span> MMMMMMMMMMMMMMMMMWW00NWKo;l0Ko:x0xc::;;::;,,,,,cOWMMMMMMMMMMMMMMMMMM<br>
     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMXOxxxxkx0XOl,,::;;,',,;,,'';cc:;xWMMMMMMMMMMMMMMMMM<br>
-    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMXkO0KXKOO0XKOoddl:,,,,;;,...',;:;,;;ckXWMMMMMMMMMMMMMMMMM<br>
-    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMXxxkdddxkO0Oxl:;,,,;;::;'......;lol;,kWMMMMMMMMMMMMMMMMMM<br>
-    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKKXK0xooxxlcl;';;''',;,......'xNWNKKWMMMMMMMMMMMMMMMMMMM<br>
+    MMMMMMMM <label><input name="attackers" value="rock" type="radio" id="rock" /><span class="red"  >ROCK</span></label>  MMMMMMMMMMMMMMMMMMMMMMMMMMXkO0KXKOO0XKOoddl:,,,,;;,...',;:;,;;ckXWMMMMMMMMMMMMMMMMM<br>
+    MMMMMMMM <label><input name="attackers" value="paper" type="radio" checked="checked"/><span class="red" id="paper">PAPER</span></label>  MMMMMMMMMMMMMMMMMMMMMMMMMXxxkdddxkO0Oxl:;,,,;;::;'......;lol;,kWMMMMMMMMMMMMMMMMMM<br>
+    MMMMMMMM <label><input name="attackers" value="scissors" type="radio"/><span class="red" id="scissors">SCISSORS</span></label>  MMMMMMMMMMMMMMMMMMMMMMWKKXK0xooxxlcl;';;''',;,......'xNWNKKWMMMMMMMMMMMMMMMMMMM<br>
     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWN00XK00xc:cll;';;'..'... ....l0NMMMMMMMMMMMMMMMMMMMMMMMM<br>
-    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWX0KKOxl;;::c:'',;,....    .,dkOXWMMMMMMMMMMMMMMMMMMMMMM<br>
+    MMMMMMMMMMMMMM <button id= "attackbutton" class="astext">ATTACK!!!</button> MMMMMMMMMMMMMMMMMMWWX0KKOxl;;::c:'',;,....    .,dkOXWMMMMMMMMMMMMMMMMMMMMMM<br>
     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNKOkxxkoc;::,::'.''..........';oocdNMMMMMMMMMMMMMMMMMMMMMM<br>
-    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXOkOxl::lc:;::;:.'c:'......,:'.',c::dKWMMMMMMMMMMMMMMMMMMMMM<br>
+    MMMMM <span id="godzilla-text1" class="green">GODZILLA </span>MMMMMMMMMMMMMMMMMMMMMMMMWXOkOxl::lc:;::;:.'c:'......,:'.',c::dKWMMMMMMMMMMMMMMMMMMMMM<br>
     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN0OKK0dc::ccccc,.:o;... .''.;;,;:lc:lxXMMMMMMMMMMMMMMMMMMMMM<br>
-    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN0OKKkolodolc:..:c'...'........,lo;';dKNMMMMMMMMMMMMMMMMMMM<br>
+    MMMMMM <span id="godzilla-text2" class="green">ATTACKS  </span>MMMMMMMMMMMMMMMMMMMMMMMMMN0OKKkolodolc:..:c'...'........,lo;';dKNMMMMMMMMMMMMMMMMMMM<br>
     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXO00Oxoldxddoc;.'c:'..,c,   ..,',l;. ..:xKNMMWWMMMMMMMMMMMMM<br>
-    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWX0OOxolccoolllc,.;:,..,lc.    .'',;.    ..,;lxKWMMMMMMMMMMMMM<br>
+    MMMMMMMMM <span id="godzilla-text3" class="green">WITH </span>  MMMMMMMMMMMMMMMMMMMMMWX0OOxolccoolllc,.;:,..,lc.    .'',;.    ..,;lxKWMMMMMMMMMMMMM<br>
     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN0k0Odlc;;cllc:,';cc:,':l'     ....co,.   .....'cx0NMMMMMMMMMM<br>
-    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN0ocllc;;:llc;,,:clol,,,'...   ...kWNOo'.   .....;cxXWMWWMMMM<br>
+    MMMMMMMMMMMM <span id="godzilla-text4" class="green">------- </span>  MMMMMMMMMMMMMMMMN0ocllc;;:llc;,,:clol,,,'...   ...kWNOo'.   .....;cxXWMWWMMMM<br>
     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWN0o:cc::;;:c:;,..,;:loc;;,;,... .oNMMMWXkc;,''...',,;lONMMMMM<br>
     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKxcc:;,''''..'''....'cc,'......,dNMMMMMMMMWWNXK0x:.....cKMMMM<br>
-    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM0:';,,;;'''...... ....','....'l0WMMMMMMMMMMMMMMMMNkc'..'kMMMM<br>
+    MMMMMMMMMM <span id="userscoretext" class="red">PLAYER SCORE: </span><span id="playerscore" class="red">   </span> MMMMMMMMMM0:';,,;;'''...... ....','....'l0WMMMMMMMMMMMMMMMMNkc'..'kMMMM<br>
     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWd';:;;;,'.','.    .',......',:0MWMMMMMMMMMMMMMMMMMMKl::xXMMMM<br>
-    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWK:,ol;::,......     ...   ..,:;l0WMMMMMMMMMMMMMMMMMWNXXNWWMMMM<br>
+    MMMMMMMMMMM <span id="godzillascoretext" class="green">GODZILLA SCORE: </span><span id="godzillascore" class="green">   </span> MMMMMWK:,ol;::,......     ...   ..,:;l0WMMMMMMMMMMMMMMMMMWNXXNWWMMMM<br>
     MMMMMMMMMWMWWMMMMMMMMMMMMMMMMMMMMMMMMXd;;oc::;;'....            .';'.'l0NMMMMMMMMMMMMMMMMMMWWMMMMMMM<br>
     MMMMMMMWX0OxxkKWMMMMMMMMMMMMMMMMMMMMM0l,;ll:;,,'.... ....      .'c;. .;d0NMMMMMMMMMMMMMMMMMMMMMMMMMM<br>
     MMMMMMNxccodl;cxKNWMMMMMMMMMMMMMMMWWXxc;:::::;;,,......,:.  .  .::. ..'lkKWMMMMMMMMMMMMMMMMMMMMMMMMM<br>
@@ -60,11 +58,11 @@
     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWO:,c:...  .... .oXMMMMWKd::lddoc;,;:kWWMMMMMMMMMMMMMMMMMMMMMM<br>
     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNk' ,c;.   ....:dONMMMMMWWWNWWMMWWWWWWMMWMMMMMMMMMMMMMMMMMMMMM<br>
     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKdoxxlcdxl;;::dWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM<br>
-    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNWMMWWWNNWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM<br>
-    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM<br>
-    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM<br>
-    
-
+    MMMMMMMMMMM<span class="red" id="instructions">::: ROCK DEFEATS SCISSORS ::: SCISSORS DEFEATS PAPER ::: PAPER DEFEATS ROCK:::</span>MMMMMMMMMMM<br>
+    MMMMMMMMMMM<span class="red" id="instructions">::: SCISSORS DEFEATS PAPER ::: PAPER DEFEATS ROCK ::: ROCK DEFEATS SCISSORS:::</span>MMMMMMMMMMM<br>
+    MMMMMMMMMMM<span class="red" id="instructions">::: PAPER DEFEATS ROCK ::: ROCK DEFEATS SCISSORS::: SCISSORS DEFEATS PAPER :::</span>MMMMMMMMMMM<br>
+    </div>
+</div>
     <script type="module" src="app.js"></script>
 </body>
 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Guess the coin flip!</h1>
+    <section class="coins">
+        <label>
+            Heads
+            <input name="coin" value="heads" type="radio" checked />
+            <img class="radio-image" src="heads.jpg">
+        </label>
+        <label>
+            Tails
+            <input name="coin" value="tails" type="radio" />
+            <img class="radio-image" src="tails.jpg">
+        </label>
+    </section>
+    <summary id="summary" class="hidden">It landed on <span id="result"></span></summary>
+    <summary>Total guesses: <span id="total"></span></summary>
+    <summary>Correct guesses: <span id="correct"></span></summary>
+    <button id="my-button">Choose Side</button>
+    <button id="reset-button">Reset Game</button>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
+

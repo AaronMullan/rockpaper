@@ -1,3 +1,41 @@
 body {
-    font-family: 'IBM Plex Mono', monospace;
+    /* font-family: 'IBM Plex Mono', monospace; */
+    font-family: 'Press Start 2P', cursive;
+    color: #b9b9b9;
+    background-color: rgb(56, 56, 56);
+    white-space: pre;
+    /* line-height: .63; */
+    font-size: 12px;
+    
+}
+#container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.green{
+    color: rgb(9, 245, 9)
+}
+.red{
+    color: red
+}
+input[type="radio"] {
+    opacity: 0;
+}
+:checked + span { color:orange; }
+.astext {
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+    color:  orange;
+    /* font-family: 'IBM Plex Mono', monospace; */
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+}
+.hidden {
+    display: none;
 }
