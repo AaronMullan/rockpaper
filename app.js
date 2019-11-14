@@ -39,7 +39,7 @@ const updateSpans = () => {
 };
 
 attackButton.addEventListener('click', () => {
-    if (godzillaScore > 9 || userScore > 9) {window.location.reload()};
+    if (godzillaScore > 9 || userScore > 9) {window.location.reload()} ;
     const userAttack = document.querySelector('input:checked').value;
     let randomGodzillaattack = Math.random();
     if (randomGodzillaattack < .33){
@@ -60,13 +60,13 @@ attackButton.addEventListener('click', () => {
 
     updateSpans();
 
-    function declareWinner (){
+    function declareWinner(){
         
         if (userScore > 9){
             userScoreText.textContent = 'YOU WIN!    ',
             userWinsSound.play() ;
         }
-        if(godzillaScore > 9){
+        if (godzillaScore > 9){
             godzillaScoreText.textContent = 'GODZILLA WINS   ',
             godzillaWinsSound.play() ;
         }
