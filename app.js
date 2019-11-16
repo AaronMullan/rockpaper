@@ -5,7 +5,7 @@ let userScore = '0';
 let godzillaScore = '0';
 
 const attackButton = document.getElementById('attackbutton');
-// const attackSelect = document.querySelectorAll('input[type=radio]');
+const attackSelect = document.getElementById('input');
 const userSpan = document.getElementById('playerscore');
 const userScoreText = document.getElementById('userscoretext');
 const godzillaScoreText = document.getElementById('godzillascoretext');
@@ -57,7 +57,6 @@ attackButton.addEventListener('click', () => {
     if (result > 0) userScore++, userScoresSound.play() ;
     if (result === 0) tieScoreSound.play() ;
     
-
     updateSpans();
 
     function declareWinner(){
@@ -69,14 +68,12 @@ attackButton.addEventListener('click', () => {
         if (godzillaScore > 9){
             godzillaScoreText.textContent = 'GODZILLA WINS   ',
             godzillaWinsSound.play() ;
-        }
-        
+        }     
     }
     declareWinner();
 
     console.log('user attack ' + userAttack);
     console.log('godzilla attack ' + godzillaAttack);
     console.log(result);
-
 
 });

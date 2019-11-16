@@ -8,18 +8,12 @@ body {
     font-size: 8px;
     
 }
-/* @media only screen and (max-width: 400px) {
-    body {
-      font-size: 12px;
-    } */
-  }
 #container{
     width: 100%;
     display: flex;
     justify-content: center;
     
 }
-
 .green{
     color: rgb(9, 245, 9)
 }
