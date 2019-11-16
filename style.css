@@ -5,9 +5,14 @@ body {
     background-color: rgb(56, 56, 56);
     white-space: pre;
     /* line-height: .63; */
-    font-size: 12px;
+    font-size: 8px;
     
 }
+/* @media only screen and (max-width: 400px) {
+    body {
+      font-size: 12px;
+    } */
+  }
 #container{
     width: 100%;
     display: flex;
@@ -23,6 +28,8 @@ body {
 }
 input[type="radio"] {
     opacity: 0;
+    width: 0;
+    margin: 0;
 }
 :checked + span { color:orange; }
 .astext {
@@ -34,7 +41,7 @@ input[type="radio"] {
     color:  orange;
     /* font-family: 'IBM Plex Mono', monospace; */
     font-family: 'Press Start 2P', cursive;
-    font-size: 12px;
+    font-size: 8px;
 }
 .hidden {
     display: none;
