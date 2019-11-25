@@ -3,7 +3,6 @@ body {
     color: #b9b9b9;
     background-color: rgb(56, 56, 56);
     white-space: pre;
-    /* line-height: .63; */
     font-size: 8px;
     
 }
@@ -42,8 +41,7 @@ input[type="radio"] {
 
 @media only screen and (max-width: 600px) {
     body {
-      /* background-color: lightblue; */
-      font-size: 4px;
+      font-size: 4px !important;
         
     }
     .astext {
