@@ -25,7 +25,7 @@ const godzillaWinsSound = new Audio('assets/godzillawins.wav');
 
 pageLoadSound.play();
 
-for (let i=0, len=attackSelect.length; i<len; i++) {
+for (let i = 0, len = attackSelect.length; i < len; i++) {
     attackSelect[i].onclick = function() {
         selectAttackSound.play();
     };
