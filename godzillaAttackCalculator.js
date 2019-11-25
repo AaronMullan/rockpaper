@@ -1,7 +1,7 @@
 export default function evaluateGodzillaStatusAndPlanAttack(result, godzillaAttack){
     const randomGodzillaattack = Math.random();
     
-    if(result === 0 ){
+    if (result === 0){
         godzillaTies();
     }
     else if (result === 1 && godzillaAttack === 'rock'){
@@ -48,4 +48,4 @@ export default function evaluateGodzillaStatusAndPlanAttack(result, godzillaAtta
         else godzillaAttack = 'paper';
     }
     return godzillaAttack;
-    };
+}
