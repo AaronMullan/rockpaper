@@ -5,7 +5,8 @@ let userScore = '0';
 let godzillaScore = '0';
 
 const attackButton = document.getElementById('attackbutton');
-const attackSelect = document.getElementById('input');
+const attackSelect = document.getElementsByName('attackers');
+console.log(attackSelect);
 const userSpan = document.getElementById('playerscore');
 const userScoreText = document.getElementById('userscoretext');
 const godzillaScoreText = document.getElementById('godzillascoretext');
@@ -13,7 +14,7 @@ const godzillaSpan = document.getElementById('godzillascore');
 const godzillaAttackSpan = document.getElementById('godzilla-text4');
 
 const pageLoadSound = new Audio('assets/pageload.wav');
-// const selectAttackSound = new Audio('selectattack.wav');
+const selectAttackSound = new Audio('assets/selectattack.wav');
 const userScoresSound = new Audio('assets/userscores.wav');
 const godzillaScoresSound = new Audio('assets/godzillascores.wav');
 const tieScoreSound = new Audio('assets/tie.wav');
@@ -22,9 +23,11 @@ const godzillaWinsSound = new Audio('assets/godzillawins.wav');
 
 pageLoadSound.play();
 
-// attackSelect.addEventListener('click', () => {
-//     selectAttackSound.play();
-// });
+for (let i=0, len=attackSelect.length; i<len; i++) {
+    attackSelect[i].onclick = function() {
+        selectAttackSound.play();
+    };
+}
 
 const updateSpans = () => {
     const userScoreSanitized = (userScore * 10);
@@ -34,7 +37,7 @@ const updateSpans = () => {
     const godzillaAttackSanitized = godzillaAttack.toUpperCase();
     godzillaAttackSpan.textContent = godzillaAttackSanitized.padEnd(8);
     if (godzillaScore > 9 || userScore > 9){
-        attackButton.textContent = 'PLAY AGAIN';
+        attackButton.textContent = 'TRY AGAIN';
     }
 };
 
