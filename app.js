@@ -57,7 +57,7 @@ attackButton.addEventListener('click', () => {
     function declareWinner(){
         
         if (userScore > 9){
-            userScoreText.textContent = 'YOU WIN!    ',
+            userScoreText.textContent = 'YOU WIN!      ',
             userWinsSound.play() ;
         }
         if (godzillaScore > 9){

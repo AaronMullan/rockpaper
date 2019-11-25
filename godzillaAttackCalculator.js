@@ -4,48 +4,48 @@ export default function evaluateGodzillaStatusAndPlanAttack(result, godzillaAtta
     if (result === 0 ){
         godzillaTies();
     }
-    else if (result === 1 && godzillaAttack === 'ROCK'){
+    else if (result === 1 && godzillaAttack === 'rock'){
         godzillaLosesWithRock();
     }
-    else if (result === 1 && godzillaAttack === 'PAPER'){
+    else if (result === 1 && godzillaAttack === 'paper'){
         godzillaLosesWithPaper();
     }
-    else if (result === 1 && godzillaAttack === 'SCISSORS'){
+    else if (result === 1 && godzillaAttack === 'scissors'){
         godzillaLosesWithScissors();
     }
 
 
 function godzillaTies(){
     if (randomGodzillaattack < .33){
-        godzillaAttack = 'ROCK';
+        godzillaAttack = 'rock';
     }
     else if (randomGodzillaattack > .33 && randomGodzillaattack < .67){
-        godzillaAttack = 'PAPER';
+        godzillaAttack = 'paper';
     }
     else if (randomGodzillaattack >= .67){
-        godzillaAttack = 'SCISSORS';
+        godzillaAttack = 'scissors';
     }
 }
 
 function godzillaLosesWithRock(){
     if (randomGodzillaattack < .5){
-        godzillaAttack = 'PAPER';
+        godzillaAttack = 'paper';
     }
-    else godzillaAttack = 'SCISSORS';
+    else godzillaAttack = 'scissors';
 }
 
 function godzillaLosesWithPaper(){
     if (randomGodzillaattack < .5){
-        godzillaAttack = 'ROCK';
+        godzillaAttack = 'rock';
     }
-    else godzillaAttack = 'SCISSORS';
+    else godzillaAttack = 'scissors';
 }
 
 function godzillaLosesWithScissors(){
     if (randomGodzillaattack < .5){
-        godzillaAttack = 'ROCK';
+        godzillaAttack = 'rock';
     }
-    else godzillaAttack = 'PAPER';
+    else godzillaAttack = 'paper';
 }
 return godzillaAttack;
 };
