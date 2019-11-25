@@ -41,9 +41,8 @@ input[type="radio"] {
 
 @media only screen and (max-width: 600px) {
     * {
-      font-size: .25em !important;
-        
-    }
+      font-size: 4px !important;
+        }
     .astext {
         background:none;
         border:none;
@@ -52,6 +51,6 @@ input[type="radio"] {
         cursor: pointer;
         color:  orange;
         font-family: 'Press Start 2P', cursive;
-        font-size: .25em;
+        font-size: 4px;
     }
 }
