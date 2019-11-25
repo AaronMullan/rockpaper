@@ -1,5 +1,4 @@
 body {
-    /* font-family: 'IBM Plex Mono', monospace; */
     font-family: 'Press Start 2P', cursive;
     color: #b9b9b9;
     background-color: rgb(56, 56, 56);
@@ -24,6 +23,7 @@ input[type="radio"] {
     opacity: 0;
     width: 0;
     margin: 0;
+    height: 0;
 }
 :checked + span { color:orange; }
 .astext {
@@ -33,10 +33,27 @@ input[type="radio"] {
     padding:0;
     cursor: pointer;
     color:  orange;
-    /* font-family: 'IBM Plex Mono', monospace; */
     font-family: 'Press Start 2P', cursive;
     font-size: 8px;
 }
 .hidden {
     display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      /* background-color: lightblue; */
+      font-size: 4px;
+        
+    }
+    .astext {
+        background:none;
+        border:none;
+        margin:0;
+        padding:0;
+        cursor: pointer;
+        color:  orange;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 4px;
+    }
 }
