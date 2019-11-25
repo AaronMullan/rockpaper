@@ -1,5 +1,7 @@
 import checkResult from './battlefunctions.js';
-let result;
+import evaluateGodzillaStatusAndPlanAttack from './godzillaAttackCalculator.js';
+
+let result = 0;
 let godzillaAttack = 'rock';
 let userScore = '0';
 let godzillaScore = '0';
@@ -44,16 +46,6 @@ const updateSpans = () => {
 attackButton.addEventListener('click', () => {
     if (godzillaScore > 9 || userScore > 9) {window.location.reload();} 
     const userAttack = document.querySelector('input:checked').value;
-    let randomGodzillaattack = Math.random();
-    if (randomGodzillaattack < .33){
-        godzillaAttack = 'rock';
-    }
-    else if (randomGodzillaattack > .33 && randomGodzillaattack < .67){
-        godzillaAttack = 'paper';
-    }
-    else if (randomGodzillaattack >= .67){
-        godzillaAttack = 'scissors';
-    }
     result = checkResult(userAttack, godzillaAttack);
 
     if (result < 0) godzillaScore++, godzillaScoresSound.play() ;
@@ -78,5 +70,5 @@ attackButton.addEventListener('click', () => {
     console.log('user attack ' + userAttack);
     console.log('godzilla attack ' + godzillaAttack);
     console.log(result);
-
+    godzillaAttack = evaluateGodzillaStatusAndPlanAttack(result, godzillaAttack);
 });
