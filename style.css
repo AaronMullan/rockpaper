@@ -40,17 +40,15 @@ input[type="radio"] {
 }
 
 @media only screen and (max-width: 600px) {
-    * {
-      font-size: 4px !important;
-        }
+    
+    body {
+        
+        width: 100vw;
+    align-items: center;
+    text-align: justify;
+    font-size: 4px;
+    }
     .astext {
-        background:none;
-        border:none;
-        margin:0;
-        padding:0;
-        cursor: pointer;
-        color:  orange;
-        font-family: 'Press Start 2P', cursive;
         font-size: 4px;
     }
 }
